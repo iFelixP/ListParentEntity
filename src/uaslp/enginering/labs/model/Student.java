@@ -1,7 +1,5 @@
 package uaslp.enginering.labs.model;
 
-import java.util.Objects;
-
 public class Student {
     private String name;
 
@@ -17,16 +15,12 @@ public class Student {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return Objects.equals(name, student.name);
-    }
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Student)) {
+            return false;
+        }
+        Student otherStudent = (Student) obj;
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
+        return this.name.equals(otherStudent.name);
     }
 }
