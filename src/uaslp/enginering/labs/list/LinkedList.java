@@ -2,14 +2,10 @@ package uaslp.enginering.labs.list;
 
 import uaslp.enginering.labs.model.Student;
 
-public class LinkedList {
 
-    public enum InsertPosition {
-        BEFORE,
-        AFTER
-    }
+public class LinkedList implements List{
 
-    public class Iterator {
+    public class Iterator implements uaslp.enginering.labs.list.Iterator{
         private Node auxNode;
 
         public Iterator(){
@@ -48,6 +44,8 @@ public class LinkedList {
 
         size++;
     }
+
+    public void delete(Student element){}
 
     public void delete(int index) {
 
