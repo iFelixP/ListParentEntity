@@ -255,10 +255,10 @@ public class LinkedListTest {
     @Test
     public void givenEmptyList_whenGetIterator_thenIteratorIsEmpty(){
         // Given:
-        LinkedList list = new LinkedList();
+        List list = new LinkedList();
 
         // When:
-        LinkedList.Iterator iterator = list.getIterator();
+        uaslp.enginering.labs.list.Iterator iterator = list.getIterator();
 
         // Then:
         assertNotNull(iterator);
@@ -269,12 +269,12 @@ public class LinkedListTest {
     @Test
     public void givenListWithOneElement_whenGetIterator_thenIteratorHasOneNext(){
         // Given:
-        LinkedList list = new LinkedList();
+        List list = new LinkedList();
 
         list.add(new Student("Ivan"));
 
         // When:
-        LinkedList.Iterator iterator = list.getIterator();
+        uaslp.enginering.labs.list.Iterator iterator = list.getIterator();
 
         // Then:
         assertNotNull(iterator);
